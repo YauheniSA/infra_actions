@@ -55,5 +55,4 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           sudo docker pull semashkevichea/infra_actions
-          sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 semashkevichea/infra_actions
