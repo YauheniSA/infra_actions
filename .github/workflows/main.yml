@@ -53,6 +53,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull semashkevichea/infra_actions
             sudo docker stop $(sudo docker ps -a -q)
